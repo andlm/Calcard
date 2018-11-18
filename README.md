@@ -30,6 +30,9 @@ efetua a análise de dados e efetiva a aprovação ou negação de um limite de 
     arquivo(s) bat(PUBLICAR_ARQUIVOS_WAR e COPIAR_ARQUIVOS) como apoio.
    
   
+  - Obs.: Vou continuar trabalhando no projeto(implantando a angularjs), mas agora vou ter que viajar para Florianópolis.
+  
+  
 ### Publicação
 
 O projeto está documentado e publicado no github.
@@ -39,6 +42,9 @@ License
 ----
 
 Calcard Administradora de Cartões
+
+
+https://github.com/andlm/Calcard
 
 
 
