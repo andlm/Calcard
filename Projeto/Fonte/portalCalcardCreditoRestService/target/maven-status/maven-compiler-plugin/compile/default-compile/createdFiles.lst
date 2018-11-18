@@ -1,0 +1,9 @@
+br\calcard\arquitetura\core\MotorAnaliseCredito.class
+br\calcard\arquitetura\core\service\SerasaspcService.class
+br\calcard\arquitetura\core\controller\AnaliseCreditoRestController.class
+br\calcard\arquitetura\core\model\Serasaspc.class
+br\calcard\arquitetura\core\model\Proposta.class
+br\calcard\arquitetura\core\config\SpringSecConfig.class
+br\calcard\arquitetura\core\repository\SerasaspcRepository.class
+br\calcard\arquitetura\core\SpringBootWarDeploymentApplication.class
+br\calcard\arquitetura\core\config\SwaggerConfig.class

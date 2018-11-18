@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+
+<title>Calcard - 2018 - Resultado da an&aacute;lise</title>
+
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+	<div class="container">
+
+		<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+		<div class="jumbotron">
+
+			<div class="panel panel-default">
+
+				<div class="panel-heading">
+					<strong>Resultado da an&aacute;lise</strong>
+				</div>
+				    
+				<div class="panel-footer">
+					<form class="form-horizontal" th:object="${propostaModel}" th:action="@{/buscarProposta}" method="POST" style="margin: 10px">
+						<div class="form-group row">
+							<div class="col-sm-4"	th:classappend="${#fields.hasErrors('cpf')}? 'has-error'">
+								<label>CPF</label>
+								<input type="text" class="form-control" data-mask="999.999.99-99" th:field="*{cpf}" data-mask-selectonfocus="true"/>
+							</div>
+						</div>
+						<div class="form-group row">
+							<button type="submit" class="btn btn-sm btn-primary"> Pesquisar </button>
+							<a class="btn btn-sm btn-success" th:href="@{/adicionarProposta/}">Adicionar</a>
+						</div>
+					</form>
+				</div>
+				
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table
+							class="table table-sm table-striped table-hover table-bordered">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Nome</th>
+									<th>Idade</th>
+									<th>Sexo</th>
+									<th>Estado civil</th>
+									<th>Estado</th>
+									<th>Dependentes</th>
+									<th>Renda Mensal R$</th>
+									<th>Resultado análise</th>
+									<th>Limite</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="post : ${propostas}">
+									<td>
+										<div class="btn-group pull-right">
+											<table>
+												<tr>
+													<td><a class="delete btn btn-sm btn-danger" th:href="@{/excluirProposta/{id}(id=${post.id})}">Excluir</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+									<td th:text="${post.nome}"></td>
+									<td th:text="${post.idade}"></td>
+									<td th:text="${post.sexo}"></td>
+									<td th:text="${post.estadocivil}"></td>
+									<td th:text="${post.estado}"></td>
+									<td th:text="${post.dependentes}"></td>
+									<td th:text="${post.renda}"></td>
+									<td th:text="${post.resultadoanalise}"></td>
+									<td th:text="${post.limite}"></td>
+									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

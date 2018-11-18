@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+<title>Calcard - 2018 - Cadastro de proposta de crédito</title>
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+	<div class="container">
+
+		<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+		
+		<div class="jumbotron">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<strong>Cadastro de proposta de crédito</strong>
+				</div>
+				
+				<div class="panel-body">
+					<form class="form-horizontal" th:object="${proposta}"
+						th:action="@{/salvarProposta}" method="POST" style="margin: 10px">
+						<div class="form-group">
+							<fieldset>
+								<div class="form-group row">
+									<div class="alert alert-danger"
+										th:if="${#fields.hasAnyErrors()}">
+										<div th:each="detailedError : ${#fields.detailedErrors()}">
+											<span th:text="${detailedError.message}"></span>
+										</div>
+									</div>
+								</div>
+																
+								<div class="form-group row"
+										th:classappend="${#fields.hasErrors('nome')}? 'has-error'">
+									<div class="col-md-4">
+										<label>Nome</label> <input type="text"
+											class="form-control input-sm" th:field="*{nome}"
+											autofocus="autofocus" placeholder="Informe um Nome"
+											maxlength="80" />
+									</div>
+									
+									<div class="col-md-4"
+										th:classappend="${#fields.hasErrors('idade')}? 'has-error'">
+										<label>Idade</label> <input type="text"
+											class="form-control input-sm" th:field="*{idade}"
+											autofocus="autofocus" placeholder="Informe uma Idade"
+											maxlength="4" />
+									</div>
+									
+									<div class="col-md-4"
+										th:classappend="${#fields.hasErrors('sexo')}? 'has-error'">
+										<label>Sexo</label> 
+										<select class="form-control input-sm" th:field="*{sexo}">
+											<option value="Masculino">Masculino</option>
+											<option value="Feminino">Feminino</option>
+										</select>
+									</div>
+								</div>
+								
+								<div class="form-group row">
+								
+									<div class="col-md-4"
+										th:classappend="${#fields.hasErrors('estadocivil')}? 'has-error'">
+										<label>Estado civil</label> 
+										<select class="form-control input-sm" th:field="*{estadocivil}">
+											<option value="Solteiro">Solteiro</option>
+											<option value="Casado">Casado</option>
+											<option value="divorciado">divorciado</option>
+											<option value="viuva">viuva</option>
+										</select>
+									</div>
+									
+									<div class="col-md-4"
+										th:classappend="${#fields.hasErrors('estado')}? 'has-error'">
+										<label>Estado</label> 
+										<select class="form-control input-sm" th:field="*{estado}">
+											<option value="AC">Acre</option>
+											<option value="AL">Alagoas</option>
+											<option value="AP">Amapá</option>
+											<option value="AM">Amazonas</option>
+											<option value="BA">Bahia</option>
+											<option value="CE">Ceará</option>
+											<option value="DF">Distrito Federal</option>
+											<option value="ES">Espírito Santo</option>
+											<option value="GO">Goiás</option>
+											<option value="MA">Maranhão</option>
+											<option value="MT">Mato Grosso</option>
+											<option value="MS">Mato Grosso do Sul</option>
+											<option value="MG">Minas Gerais</option>
+											<option value="PA">Pará</option>
+											<option value="PB">Paraíba</option>
+											<option value="PR">Paraná</option>
+											<option value="PE">Pernambuco</option>
+											<option value="PI">Piauí</option>
+											<option value="RJ">Rio de Janeiro</option>
+											<option value="RN">Rio Grande do Norte</option>
+											<option value="RS">Rio Grande do Sul</option>
+											<option value="RO">Rondônia</option>
+											<option value="RR">Roraima</option>
+											<option value="SC">Santa Catarina</option>
+											<option value="SP">São Paulo</option>
+											<option value="SE">Sergipe</option>
+											<option value="TO">Tocantins</option>
+										</select>
+									</div>
+									<div class="col-md-4"
+										th:classappend="${#fields.hasErrors('dependentes')}? 'has-error'">
+										<label>Dependentes</label> <input type="text"
+											class="form-control input-sm" th:field="*{dependentes}"
+											maxlength="4" placeholder="Informe um n&uacute;mero de dependentes" />
+									</div>
+									
+									
+								</div>
+
+								<div class="form-group row">
+									
+									<div class="col-md-4"
+										th:classappend="${#fields.hasErrors('renda')}? 'has-error'">
+										<label>Renda Mensal R$</label> 
+										<input type="text" class="form-control input-sm" th:field="*{renda}" maxlength="15" 
+											 />
+									</div>
+									
+									<div class="col-sm-8"
+										th:classappend="${#fields.hasErrors('cpf')}? 'has-error'">
+										<label>CPF</label>
+										<input type="text" class="form-control" data-mask="999.999.99-99" th:field="*{cpf}" data-mask-selectonfocus="true"/>
+									</div>
+									
+									
+								</div>
+								
+							</fieldset>
+						</div>
+						<div class="form-group row">
+							<button type="submit" class="btn btn-sm btn-primary"> Salvar </button>
+							<a th:href="@{/pesquisarProposta}" class="btn btn-sm btn-default">Cancelar</a>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+
+
+</html>

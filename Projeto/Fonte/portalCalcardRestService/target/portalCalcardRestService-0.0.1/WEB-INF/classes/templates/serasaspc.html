@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+
+<title>Calcard - 2018 - SPC / Serasa</title>
+
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+	<div class="container">
+
+		<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+		<div class="jumbotron">
+
+			<div class="panel panel-default">
+
+				<div class="panel-heading">
+					<strong>SPC / Serasa</strong>
+				</div>
+				<div class="panel-footer">
+					<a class="btn btn-sm btn-success" th:href="@{/adicionarSerasaSPC/}">Adicionar</a>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table
+							class="table table-sm table-striped table-hover table-bordered">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Nome</th>
+									<th>CPF</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="post : ${serasaspcs}">
+									<td>
+										<div class="btn-group pull-right">
+											<table>
+												<tr>
+													<td><a class="delete btn btn-sm btn-danger" th:href="@{/excluirSerasaSPC/{id}(id=${post.id})}">Excluir</a></td>
+												</tr>
+											</table>
+										</div>
+									</td>
+									<td th:text="${post.nome}"></td>
+									<td th:text="${post.cpf}"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

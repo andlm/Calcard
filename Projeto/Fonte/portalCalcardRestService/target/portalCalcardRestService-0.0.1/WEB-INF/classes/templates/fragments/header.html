@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div class="container">
+
+		<div th:fragment="header">
+			<div id="Content">
+				<div class="content_wrapper clearfix">
+					<div class="sections_group">
+						<div class="section center section-uc-1">
+							<div class="section_wrapper clearfix">
+								<div class="items_group clearfix">
+									<div class="column one column_column">
+										<a id="logo" href="https://www.calcard.com.br/" title="Calcard">
+											<img class="scale-with-grid"
+											src="http://localhost:8080/portalCalcardRestService/images/logo-calcard.png"
+											alt="Calcard" />
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#" th:href="@{/}"></a>
+						<ul class="nav navbar-nav">
+							<li><a href="#" th:href="@{/adicionarProposta}">Cadastro de proposta de cr&eacute;dito</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="#" th:href="@{/pesquisarProposta}">Resultado da an&aacute;lise</a></li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li><a href="#" th:href="@{/pesquisarSerasaSPC}">Retri&ccedil;&atilde;o SPC/Serasa</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

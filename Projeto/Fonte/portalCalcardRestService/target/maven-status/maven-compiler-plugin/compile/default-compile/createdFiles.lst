@@ -1,0 +1,16 @@
+br\calcard\arquitetura\core\model\Usuario.class
+br\calcard\arquitetura\core\repository\SerasaspcRepository.class
+br\calcard\arquitetura\core\service\PropostaService.class
+br\calcard\arquitetura\core\repository\PropostaRepository.class
+br\calcard\arquitetura\core\repository\LoginRepository.class
+br\calcard\arquitetura\core\service\SerasaspcService.class
+br\calcard\arquitetura\core\model\Serasaspc.class
+br\calcard\arquitetura\core\model\PropostaModel.class
+br\calcard\arquitetura\core\controller\IndexController.class
+br\calcard\arquitetura\core\controller\PropostaController$1.class
+br\calcard\arquitetura\core\controller\SerasaspcController.class
+br\calcard\arquitetura\core\model\Proposta.class
+br\calcard\arquitetura\core\controller\PropostaController.class
+br\calcard\arquitetura\core\SpringBootWarDeploymentApplication.class
+br\calcard\arquitetura\core\config\SwaggerConfig.class
+br\calcard\arquitetura\core\config\SpringSecConfig.class

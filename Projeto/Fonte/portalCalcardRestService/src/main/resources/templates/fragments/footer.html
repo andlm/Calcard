@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<body>
+	<div class="container">
+
+		<div th:fragment="footer">
+		
+			<div class="jumbotron footer">
+				 2018 Cartão de Crédito Calcard. Todos os Direitos Reservados | Uma Empresa <a
+					href="https://www.calcard.com.br/" target="_blank">Calcard Group</a>
+					
+					<span sec:authorize="isAuthenticated()">
+		                | <a th:href="@{/logout}">Logout</a>
+		            </span>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

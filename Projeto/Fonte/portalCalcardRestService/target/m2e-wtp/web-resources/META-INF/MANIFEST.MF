@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: andy
+Build-Jdk: 10.0.2
+Implementation-Title: portalCalcardRestService
+Implementation-Version: 0.0.1
+Implementation-Vendor-Id: br.calcard.arquitetura.core
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/portalCalcar
+ dRestService/
+Created-By: Maven Integration for Eclipse
+

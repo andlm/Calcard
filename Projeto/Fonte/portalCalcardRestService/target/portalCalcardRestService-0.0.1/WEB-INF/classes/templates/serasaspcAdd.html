@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head lang="en">
+<title>Calcard - 2018 - Cadastro de SPC / Serasa</title>
+<!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+	<div class="container">
+
+		<!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+		
+		<div class="jumbotron">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<strong>Cadastro de SPC / Serasa</strong>
+				</div>
+				
+				<div class="panel-body">
+					<form class="form-horizontal" th:object="${serasaspc}"
+						th:action="@{/salvarSerasaSPC}" method="POST" style="margin: 10px">
+						<div class="form-group">
+							<fieldset>
+								<div class="form-group row">
+									<div class="alert alert-danger"
+										th:if="${#fields.hasAnyErrors()}">
+										<div th:each="detailedError : ${#fields.detailedErrors()}">
+											<span th:text="${detailedError.message}"></span>
+										</div>
+									</div>
+								</div>
+								
+
+								<div class="form-group row">
+									
+									<div class="col-md-8"
+										th:classappend="${#fields.hasErrors('nome')}? 'has-error'">
+										<label>Nome R$</label> 
+										<input type="text" class="form-control input-sm" th:field="*{nome}" maxlength="80" 
+											 />
+									</div>
+									
+									<div class="col-sm-4"
+										th:classappend="${#fields.hasErrors('cpf')}? 'has-error'">
+										<label>CPF</label>
+										<input type="text" class="form-control" data-mask="999.999.99-99" th:field="*{cpf}" data-mask-selectonfocus="true"/>
+									</div>
+									
+								</div>
+								
+							</fieldset>
+						</div>
+						<div class="form-group row">
+							<button type="submit" class="btn btn-sm btn-primary"> Salvar </button>
+							<a th:href="@{/pesquisarSerasaSPC}" class="btn btn-sm btn-default">Cancelar</a>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	
+</body>
+
+
+</html>
