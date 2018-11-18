@@ -1,4 +1,4 @@
-# Avaliação Técnica
+# Avaliação Técnica - Anderson
 
 [![drawing](https://sitegabriela.conductor.com.br/App_Themes/8/Images/Logos/BannerSite.png)](http://www.calcard.com.br/)
 
@@ -9,8 +9,8 @@ efetua a análise de dados e efetiva a aprovação ou negação de um limite de 
 
   - Frontend: [AngularJS], [Html5], [Bootstrap], [Thymeleaf], [CSS]
   - Backend: [Java], [Spring-boot], [Postgresql 9], [gson]
-  - Servidor Aplicação: [tomcat]
-  - Integrações: [Rest] conceito Restful 		  	
+  - Servidor Aplicação: [Tomcat 9]
+  - Integrações: [Rest] conceito Restful e RestTemplate		  	
   - Documentação: [Swagger]						  		
   
 
