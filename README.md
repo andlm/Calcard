@@ -23,15 +23,10 @@ efetua a análise de dados e efetiva a aprovação ou negação de um limite de 
 
 ### Observações 
 
-  - Pontos 95 % Arquitetura(Frontend-Angular) e Desafios(Docker incompleto).
-  - Todos os outros pontos completados com 100% em 3 projetos.  
-  - Frontend coloquei pouco de [AngularJS] ponto a melhorar, foco no negócio.
-  - Integração com docker deu conflito com as versões do apache tomcat ponto a melhorar, solução então fiz os 
-    arquivo(s) bat(PUBLICAR_ARQUIVOS_WAR e COPIAR_ARQUIVOS) como apoio.
-   
-  
-  - Obs.: Vou continuar trabalhando no projeto(implantando a angularjs), mas agora vou ter que viajar para Florianópolis.
-  
+  - Pontos a melhorar que não foram completados com 100% conforme especificações são: 95% Arquitetura (Frontend-Angular) e Desafios (Docker incompleto).
+  - Frontend coloquei pouco de [AngularJS], ponto a melhorar, foco no negócio.
+  - Integração com docker deu conflito com as versões do apache tomcat, ponto a melhorar, solução intermediária foi à criação dos arquivos(s) bat (PUBLICAR_ARQUIVOS_WAR e COPIAR_ARQUIVOS) para deploy da aplicação no servidor de aplicação.
+  - Todos os outros pontos da especificação foram completados com sucesso e estão referenciados nos três projetos.
   
 ### Publicação
 
