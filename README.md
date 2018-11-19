@@ -27,6 +27,7 @@ efetua a análise de dados e efetiva a aprovação ou negação de um limite de 
   - Frontend coloquei pouco de [AngularJS], ponto a melhorar, foco no negócio.
   - Integração com docker deu conflito com as versões do apache tomcat, ponto a melhorar, solução intermediária foi à criação dos arquivos(s) bat (PUBLICAR_ARQUIVOS_WAR e COPIAR_ARQUIVOS) para deploy da aplicação no servidor de aplicação.
   - Todos os outros pontos da especificação foram completados com sucesso e estão referenciados nos três projetos.
+  - O projeto portalCalcardAngularPropostaNOK não está OK, somente foi adicionado como demonstração de conhecimento para atendimento de requisito [AngularJS], entretanto o que vale como Avaliação Técnica é o "portalCalcardRestService" junto com os serviços rest.
   
 ### Publicação
 
